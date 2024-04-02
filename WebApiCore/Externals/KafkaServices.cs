@@ -18,7 +18,7 @@ namespace WebApiCore.Externals
             try
             {
                 string jsonString = JsonSerializer.Serialize(produto);
-                var topic = "test-topic";
+                var topic = "Estoque";
                 var message = new Message<Null, string> { Value = jsonString };
                 producer.Produce(topic, message);
                 return true;
